@@ -18,7 +18,7 @@ function menu() {
   $('#menu').on('click', displayMenu)
 }
 
-function displayMenu(e){
+function displayMenu(){
     $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
 }
 
@@ -26,7 +26,7 @@ function play() {
   $('#play').on('click', nowPlaying)
 }
 
-function nowPlaying(e) {
+function nowPlaying() {
     $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
     return "now playing " + songToPlay + " by " + theArtist;
 }
@@ -35,7 +35,7 @@ function pause() {
   $('#pause').on('click', pauseSong)
 }
 
-function pauseSong(e) {
+function pauseSong() {
     $('#songPaused').html(songToPlay + " is paused");
 }
 
@@ -43,7 +43,7 @@ function show() {
   $('#show').on('click', showSongs)
 }
 
-function showSongs(e) {
+function showSongs() {
     var songs = "";
     for (var key in jukeboxSongs) {
       songs += jukeboxSongs[key] + " by " + key +  " is available to play. "
